@@ -1,5 +1,5 @@
 document.querySelector('.btn-container').addEventListener('click', () => {
-  alert('SEJA BEM VINDO AO KEY SAFE!');
+  alert('SEJA BEM VINDO AO GENIUSUNO!');
 });
 
 const carousel = document.querySelector('.carousel');
