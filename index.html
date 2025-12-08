@@ -426,106 +426,117 @@ void toner(byte which, int buzz_length_ms) {
 
 
     <div class="dt">
-        <h1>Passo a passo do projeto</h1>
-        <p>Principais etapas realizadas para desenvolver e implementar a fechadura eletrônica:
-        </p>
-    </div>
-    <div class="container-co">
-        <div class="projects-grid">
-            <!-- Card 1 -->
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="tags">
-                        <div class="tag">Arduino uno</div>
-                        <div class="tag">Protoboard</div>
-                        <div class="tag">RFID e Jumpers</div>
-                    </div>
-                    <div class="project-title">1º passo</div>
-                    <p class="project-description">
-                        Conecte o Arduino Uno à protoboard maior.
-                        Instale o módulo RFID na protoboard e conecte-o ao Arduino usando jumpers.
-                        Objetivo: Garantir a leitura do cartão RFID.
-                    </p>
+    <h1>Passo a passo do projeto</h1>
+    <p>Principais etapas realizadas para desenvolver e implementar o jogo Genius:
+    </p>
+</div>
+<div class="container-co">
+    <div class="projects-grid">
+
+        <!-- Card 1 -->
+        <div class="project-card">
+            <div class="project-content">
+                <div class="tags">
+                    <div class="tag">Arduino Uno</div>
+                    <div class="tag">Protoboard</div>
+                    <div class="tag">LEDs</div>
                 </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="tags">
-                        <div class="tag">Tela LCD</div>
-                        <div class="tag">I2C</div>
-                        <div class="tag">Exibir informações</div>
-                    </div>
-                    <div class="project-title">2º passo</div>
-                    <p class="project-description">
-                        Conecte a tela LCD ao Arduino via um conversor de 10 pinos para 4 pinos.
-                        Configure a comunicação I2C para exibir mensagens.
-                        Objetivo: Exibir informações como "Acesso Permitido" ou "Acesso Negado".
-                    </p>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="tags">
-                        <div class="tag">Teclado numérico</div>
-                        <div class="tag">Código PIN</div>
-                        <div class="tag">Verificar entrada de senha</div>
-                    </div>
-                    <div class="project-title">3º passo</div>
-                    <p class="project-description">
-                        Instale o teclado numérico e conecte os pinos ao Arduino.
-                        Programe para aceitar um código PIN como alternativa ao RFID.
-                        Objetivo: Verificar a entrada de senha.
-                    </p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="tags">
-                        <div class="tag">RFID</div>
-                        <div class="tag">Teclado numérico</div>
-                        <div class="tag">Lógica da fechadura</div>
-                    </div>
-                    <div class="project-title">4º passo</div>
-                    <p class="project-description">
-                        Programe o Arduino para processar entradas do RFID e do teclado numérico.
-                        Defina condições para liberar o acesso (ex.: cartão válido ou PIN correto).
-                        Objetivo: Criar a lógica da fechadura.
-                    </p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="tags">
-                        <div class="tag">RFID</div>
-                        <div class="tag">Validação</div>
-                    </div>
-                    <div class="project-title">5º passo</div>
-                    <p class="project-description">
-                        Simule leituras do RFID e digitação no teclado numérico.
-                        Teste diferentes cenários para validar o funcionamento.
-                        Objetivo: Garantir que todas as entradas funcionam corretamente.
-                    </p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="tags">
-                        <div class="tag">Organize os componentes</div>
-                        <div class="tag">Cabos conectados</div>
-                        <div class="tag">Finalização</div>
-                    </div>
-                    <div class="project-title">6º passo</div>
-                    <p class="project-description">
-                        Organize os componentes no protótipo final.
-                        Certifique-se de que os cabos estejam bem conectados.
-                        Objetivo: Finalizar o protótipo para demonstração.
-                    </p>
-                </div>
+                <div class="project-title">1º passo</div>
+                <p class="project-description">
+                    Conecte os quatro LEDs coloridos (vermelho, verde, azul e amarelo) na protoboard.
+                    Ligue cada LED ao Arduino com um resistor apropriado.
+                    Objetivo: Criar as luzes que o jogo usará para mostrar a sequência.
+                </p>
             </div>
         </div>
+
+        <!-- Card 2 -->
+        <div class="project-card">
+            <div class="project-content">
+                <div class="tags">
+                    <div class="tag">Botões</div>
+                    <div class="tag">Entrada do jogador</div>
+                    <div class="tag">Protoboard</div>
+                </div>
+                <div class="project-title">2º passo</div>
+                <p class="project-description">
+                    Instale quatro botões, cada um correspondente a um LED.
+                    Conecte os botões ao Arduino usando resistores pull-down ou pull-up.
+                    Objetivo: Permitir que o jogador digite a sequência exibida pelo jogo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="project-card">
+            <div class="project-content">
+                <div class="tags">
+                    <div class="tag">Buzzer</div>
+                    <div class="tag">Som</div>
+                    <div class="tag">Feedback</div>
+                </div>
+                <div class="project-title">3º passo</div>
+                <p class="project-description">
+                    Conecte um buzzer ao Arduino para emitir sons associados a cada cor.
+                    Programe tons diferentes para cada LED.
+                    Objetivo: Criar feedback sonoro para deixar o jogo mais intuitivo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="project-card">
+            <div class="project-content">
+                <div class="tags">
+                    <div class="tag">Lógica do jogo</div>
+                    <div class="tag">Sequência</div>
+                    <div class="tag">Arduino</div>
+                </div>
+                <div class="project-title">4º passo</div>
+                <p class="project-description">
+                    Programe o Arduino para gerar uma sequência aleatória de LEDs e sons.
+                    Crie funções para exibir a sequência e captar a resposta do jogador.
+                    Objetivo: Desenvolver a mecânica principal do jogo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="project-card">
+            <div class="project-content">
+                <div class="tags">
+                    <div class="tag">Comparação</div>
+                    <div class="tag">Validação</div>
+                </div>
+                <div class="project-title">5º passo</div>
+                <p class="project-description">
+                    Programe o Arduino para comparar a entrada do jogador com a sequência gerada.
+                    Trate casos de acerto, erro e avanço de nível.
+                    Objetivo: Garantir que o jogo responda corretamente às ações do jogador.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="project-card">
+            <div class="project-content">
+                <div class="tags">
+                    <div class="tag">Montagem final</div>
+                    <div class="tag">Organização</div>
+                    <div class="tag">Demonstração</div>
+                </div>
+                <div class="project-title">6º passo</div>
+                <p class="project-description">
+                    Organize LEDs, botões e buzzer de forma compacta e visualmente clara.
+                    Verifique se todos os cabos e conexões estão firmes.
+                    Objetivo: Finalizar o protótipo pronto para testes e apresentação.
+                </p>
+            </div>
+        </div>
+
     </div>
+</div>
+
 
     <section class="process-containerdifi">
         <h1>Maiores dificuldades</h1>
