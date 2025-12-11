@@ -557,6 +557,27 @@ tr:first-child th {
     line-height: 1.5;
 }
 
+/* Container responsivo 16:9 */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* opcional: limita a largura máxima */
+  margin: 0 auto; /* centra */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
 /* Botão */
 .btn-container {
     background: linear-gradient(157.26deg, #000000 26.8%, rgba(75, 75, 75, 0.93) 101.4%);
