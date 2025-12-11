@@ -560,25 +560,20 @@ tr:first-child th {
 /* Container responsivo 16:9 */
 .video-wrapper {
   width: 100%;
-  max-width: 450px;     /* <<< tamanho reduzido */
+  max-width: 450px;   /* tamanho que você queria */
   margin: 0 auto;
   position: relative;
-  padding-bottom: 177.78%; /* proporção de vídeo vertical (9:16) */
-  height: 0;
+  height: 350px;      /* <<< altura fixa (pode ajustar) */
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 .video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   border: 0;
 }
-
 
 
 /* Botão */
